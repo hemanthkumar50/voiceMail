@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .header .pro{
+    /* background-color: #007bff; */
+    color: #000000;
+  
+  }
+
+
+  .header .pro {
+    width: 10vh;
+    height: 10vh;
+    border-radius:100px;
+  }
+
+  .header .pro img{
+    padding: 10px 10px;
+    width: 10vh;
+    height: 10vh;
+    border-radius:100px;
+  }
+
+
+
+  .header .pro-1 .rec-name{
+    padding: 10px 20px;
+    font-size:15px;
+    font-weight:300;
+  }
+
+
+  .header .pro-1 p{
+    padding: 10px 20px;
+    font-size:15px;
+    font-weight:300;
+  }
+
+  .header{
+    text-decoration: none;
+  
+  }
+

@@ -1,0 +1,387 @@
+
+/* compose mail */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+.compose{
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+ 
+
+.compose a{
+    padding: 12px 15px;
+    border-radius: 5px;
+    /* border: 1px solid rgba(0, 0, 0, 0.575); */
+    box-shadow: 1px 1px 9px 1px  rgba(0, 0, 0, 0.336);
+    color: #000000;
+    font-weight: 600;
+    background-color: #ffffffab;
+  }
+  
+.compose a:hover{
+    background-color:#007bff;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+
+.wrapper .sidebar{
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 265px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile{
+   display: flex;
+   flex-wrap: wrap;
+ 
+}
+
+.wrapper .sidebar .image {
+   padding: 10px 10px;
+   /* position: relative;
+  top:5vh; */
+}
+
+.wrapper .sidebar  .image img{
+    display: block;
+    width:17vh;
+    height:17vh;
+    border-radius: 50%;
+   
+}
+
+.wrapper .sidebar .vc {
+    padding: 0px 10px;
+}
+
+.wrapper .sidebar .vc  h3{
+    color:#0c0c0c;
+    padding: 10px 0px;
+}
+
+.wrapper .sidebar .profile p{
+    padding: 10px 0px;
+    color:#0c0c0c;
+    font-size: 14px;
+}
+.wrapper .sidebar ul {
+    padding: 30px 0px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #ffffff;
+    color: #0c0c0c;
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #000000;
+    width: 30px;
+    display: inline-block;
+}
+
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #ffffff;
+
+    background:#007bff;
+    
+    border-right: 2px solid #ffffff;
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #ffffff;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+    width: calc(100% - 325px);
+    margin-left: 265px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    /* background:#007bff; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    /* padding: 0 30px; */
+}
+
+.account{
+display: flex;
+justify-content: end;
+align-items: center;
+position: relative;
+bottom:20px;
+}
+
+.account img{
+  width:6vh;
+  height:6vh;
+  border-radius: 50%;
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    position: relative;
+    top:20px;
+    font-size: 28px;
+    color:#007bff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    font-size: 29px;
+    color: #0c0c0c;
+}
+
+body.active .wrapper .sidebar{
+    left: -265px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+
+/* voice-image */
+.voice-image {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.voice-image img{
+    width:40vh;
+    height:30vh;
+    border-radius: 5px;
+  }
+
+
+
+/* search box */
+
+.container {
+    margin: 10px auto;
+    max-width: 400px;
+    position: relative;
+    bottom:40px;
+   
+  }
+  
+
+  #searchInput {
+    border-radius: 50px;
+    width: 100%;
+    font-size: 15px;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  /* #searchInput:focus{
+   outline: 2px solid black;
+  } */
+
+
+  #searchResults {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #searchResults li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+  }
+  
+
+
+
+
+
+
+
+  /* home */
+  section{
+    position: relative;
+    bottom:40px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home{
+    
+    padding: 0px 20px;
+  }
+
+  .home .inbox-box {
+    margin: 10px 0px;
+    width:150vh;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 10px;
+    border-radius:5px;
+    box-shadow: 1px 1px 9px 1px  rgba(0, 0, 0, 0.336);
+    /* background-color: rgba(4, 5, 5, 0.233); */
+  }
+
+  .home .inbox-box:hover{
+    /* border: 1px solid rgba(0, 0, 0, 0.329); */
+    background-color: rgba(58, 33, 196, 0.192);
+  }
+
+ 
+  .home .inbox-box .name {
+   width:20vh;
+   margin: 10px 20px;
+ 
+  }
+
+
+  .home .inbox-box .name h1{
+    font-size:20px;
+   font-weight:400;
+   color: #000000;
+ 
+  }
+
+  .home .inbox-box .image-profile img{
+    width:8vh;
+    height:8vh;
+    border-radius:100px;
+    background-size: cover;
+    position: relative;
+    top:10px;
+  }
+  
+  .home .inbox-box .name h4{
+    width: 100%;
+    padding:5px 0px;
+    color: #0000009f;
+    font-size: 12px;
+   font-weight:600;
+ 
+  }
+
+  .home .inbox-box .subject {
+   padding: 0px 10px;
+   width:90vh;
+   }
+
+/* 
+   .home .inbox-box .subject .sub{
+     font-size: 18px;
+     font-weight: 700;
+    } */
+  
+  .home .inbox-box .subject p{
+   padding: 25px 0px;
+   font-size: 12px;
+   font-weight: 400;
+   padding-right: 20px;
+
+  }
+
+  .home  .doc{
+    display: flex;
+    justify-content:end;
+    align-items: end;
+    border-radius: 5px;
+    position: relative;
+    bottom: 20px;
+    }
+
+
+.home  .doc a{
+  margin: 0px 10px;
+  color: rgb(255, 248, 248);
+  background-color: #007bff;
+  border-radius:3px;
+  padding: 7px 7px;
+  font-size:12px;
+  font-weight: 300;    
+}
+
+.home  .doc a:hover{
+  background-color: #007bffa2;
+  
+}
+
+  .home .inbox-box .subject-2 {
+    padding: 20px 10px;
+    position: relative;
+    left: 50px;
+
+  
+    
+    }
+
+    
+  .home .inbox-box .subject-2 .rec{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0000007e;
+    }
+ 
+ 
+   
+   .home .inbox-box .subject-2 p{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    color: #0000007e;
+    padding: 1px 0px;
+    font-size: 12px;
+    font-weight: 500;
+ 
+   }
+ 
+   /* pdf */
+
+   .pdf a img {
+     width:4vh;
+     height:5vh;
+     border-radius: 5px;
+     background-size: cover;
+    
+   }
+
+   .pdf {
+ position: relative;
+ top:20px;
+  }
+ 

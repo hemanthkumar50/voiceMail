@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media (max-width: 768px) {
+          .sidebar {
+              width: 100%;
+              height: auto;
+          }
+          .section {
+              padding: 10px;
+          }
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper {
+            display: flex;
+            height: 100%;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f1f1f1;
+            padding: 20px 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .sidebar ul li a:hover {
+            background-color: #ddd;
+        }
+        .section {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .compose {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    {% comment %} <div class="sidebar">
+        <!-- Additional sidebar content can go here -->
+    </div> {% endcomment %}
+    
+    <!-- Main Content Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Compose Email</h2>
+            <form id="emailForm">
+                <div class="compose">
+                    <input type="email" id="from" name="from" placeholder="From" required>
+                </div>
+                <div class="compose">
+                    <input type="email" id="to" name="to" placeholder="To">
+                </div>
+                <div class="compose">
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="compose">
+                    <textarea id="message" name="message" placeholder="Message"></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const synth = window.speechSynthesis; // Get the speechSynthesis object
+
+      if (SpeechRecognition && synth) {
+          let recognition;
+          let currentInput = null; // Track the currently focused input
+
+          // Function to initiate speech recognition
+          function initRecognition() {
+              recognition = new SpeechRecognition();
+              recognition.continuous = false; // Set to false for discrete recognition
+              recognition.lang = 'en-US'; // Specify the language
+              recognition.interimResults = false; // We are only interested in final results
+
+              recognition.onresult = function(event) {
+                  // Concatenate results if recognition is triggered multiple times
+                  const transcript = Array.from(event.results)
+                    .map(result => result[0].transcript)
+                    .join('');
+                  if (currentInput && transcript) {
+                      currentInput.value += transcript; // Append new text to the current input
+                  }
+              };
+
+              recognition.onend = function() {
+                  // Restart recognition for new input
+                  if (currentInput) {
+                      initRecognition();
+                      recognition.start();
+                  }
+              };
+
+              recognition.onerror = function(event) {
+                  console.error('Speech recognition error: ' + event.error);
+              };
+          }
+
+          // Function to stop speech synthesis
+          function stopSpeaking() {
+              if (synth.speaking) { // If speech is currently being spoken
+                  synth.cancel(); // Cancel the speech
+              }
+          }
+
+          document.querySelectorAll('input[type="text"], input[type="email"], textarea').forEach(input => {
+              input.addEventListener('mouseover', function() {
+                  stopSpeaking(); // Ensure to stop any ongoing speech first
+                  const msg = new SpeechSynthesisUtterance('You are now focused on the ' + this.placeholder + ' field. Please speak your input after the beep.');
+                  synth.speak(msg);
+              });
+
+              input.addEventListener('mouseout', function() {
+                  stopSpeaking(); // Stop speaking when mouse leaves the input
+              });
+
+              input.addEventListener('click', function() {
+                  if (currentInput !== this) {
+                      currentInput = this; // Update the current input being focused
+                      if (recognition) {
+                          recognition.abort(); // Abort any existing recognition session
+                      }
+                      initRecognition(); // Initialize a new recognition instance
+                      recognition.start(); // Start recognition
+                  }
+              });
+          });
+      } else {
+          console.log('Speech recognition or synthesis not supported in this browser.');
+      }
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'css/sent.css' %} ">
+</head>
+<body>
+
+    <div class="wrapper">
+        <!--Top menu -->
+        <div class="sidebar">
+           <!--profile image & text-->
+           <div class="profile">
+
+            <div class="compose">
+                <a href=" {% static 'compose.html' %} ">Compose</a>
+              </div>
+              
+            <div class="image">
+                <img src=" {% static 'logo.png' %} ">
+            </div>
+
+          
+     
+
+          
+
+        </div>
+
+            <div class="vc">          
+            <h3>VoiceMail</h3>
+            <p>Can Sent mail through voice</p>
+            </div>
+
+            <!--menu item-->
+
+            <ul>
+                <li>
+                    <a href=" {% static 'index.html' %} ">
+                        <!-- <span class="icon"><i class="fas fa-home"></i></span> -->
+                        <span class="item">Inbox</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="sent" href=" {% static 'sent.html' %} " class="active">
+                        <!-- <span class="icon"><i class="fas fa-desktop"></i></span> -->
+                        <span class="item">Sent</span>
+                    </a>
+                </li>
+              
+                <li>
+                    <a href=" {% static 'voice.html' %} ">
+                        <!-- <span class="icon"><i class="fas fa-cog"></i></span> -->
+                        <span class="item">Voice Customization</span>
+                    </a>
+                </li>
+
+              
+                <li>
+                    <a href=" {% static 'doc.html' %} ">
+                        <!-- <span class="icon"><i class="fas fa-user-friends"></i></span> -->
+                        <span class="item">Doc to Voice</span>
+                    </a>
+                </li>
+
+               
+                <li>
+                    <a href="#">
+                        <!-- <span class="icon"><i class="fas fa-cog"></i></span> -->
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            
+            </ul>
+
+
+
+        </div>
+      
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            
+            </div>
+
+         
+
+             <!-- search box -->
+
+             <div class="container">
+                <input type="text" id="searchInput" placeholder="Search Mail.......">
+                <ul id="searchResults"></ul>
+              </div>
+
+
+            <!-- inbox -->
+            <section>
+                <div class="home">
+
+                
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+               
+
+                   
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+                    <div class="inbox-box">
+                        <a href=" {% static 'sent-preview.html' %} ">
+                        <div class="name">
+                            <span>To :</span>    
+                            <h1> Deva1234@gmail.com</h1>
+                        </div>
+                    </a>  
+                        <div class="subject">
+                         <!-- <div class="sub">Subject</div> -->
+                         <p>Data Analytics with python equested access to your design titled "Voice Based Email System For Blinds.pptx"
+                            Inbox</p>
+                        </div>
+
+                        <div class="doc">
+                    
+                                <a href=" {% static '' %} ">document</a>
+                            
+                           </div>
+   
+
+                        <div class="subject-2">
+                            <p> Sent at  3:20 pm</p>
+                           </div>
+
+                    </div>
+
+
+                   
+
+
+
+
+                  
+
+                </div>
+            </section>
+
+         
+        </div>
+        
+        </div>
+
+      
+   
+  <script>
+     var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+
+//     const data = [
+//   { id: 1, title: 'Search Result 1', description: 'search' },
+//   { id: 2, title: 'Search Result 2', description: 'Description 2' },
+//   { id: 3, title: 'Search Result 3', description: 'Description 3' },
+//   { id: 4, title: 'Search Result 4', description: 'Description 4' },
+//   Add more data items as needed
+// ];
+
+// const searchInput = document.getElementById('searchInput');
+// const searchResults = document.getElementById('searchResults');
+
+// function displayResults(results) {
+//   searchResults.innerHTML = '';
+
+//   if (results.length === 0) {
+//     const li = document.createElement('li');
+//     li.textContent = 'No results found';
+//     searchResults.appendChild(li);
+//   } else {
+//     results.forEach(result => {
+//       const li = document.createElement('li');
+//       li.textContent = `${result.title} - ${result.description}`;
+//       searchResults.appendChild(li);
+//     });
+//   }
+// }
+
+// function filterResults(searchQuery) {
+//   return data.filter(item =>
+//     item.title.toLowerCase().includes(searchQuery) ||
+//     item.description.toLowerCase().includes(searchQuery)
+//   );
+// }
+
+// searchInput.addEventListener('input', function() {
+//   const searchQuery = this.value.trim().toLowerCase();
+
+//   if (searchQuery.length === 0) {
+//     displayResults([]);
+//     return;
+//   }
+
+//   const results = filterResults(searchQuery);
+//   displayResults(results);
+// });
+
+// searchResults.addEventListener('click', function(event) {
+//   const clickedItem = event.target;
+//   if (clickedItem.tagName === 'LI') {
+//     alert(`Clicked on: ${clickedItem.textContent}`);
+//   }
+// });
+
+  </script>
+</body>
+</html>
