@@ -39,7 +39,7 @@
 
             <ul class="side-nav">
                 <li>
-                    <a href="index.html" class="active">
+                    <a href="{% url 'home' %}" class="active">
                         
                         <span class="material-symbols-outlined">
                             archive
@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="sent.html">
+                    <a href="{% url 'sent' %}">
                         <span class="material-symbols-outlined">
                             forward
                             </span>
@@ -57,7 +57,7 @@
                 </li>
 
                 <li>
-                    <a href="compose.html">
+                    <a href="{% url 'compose' %}">
                         <span class="material-symbols-outlined">
                             edit_square
                             </span>
@@ -68,6 +68,7 @@
               
 
 
+          </ul>
 
         </div>
       
