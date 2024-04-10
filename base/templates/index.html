@@ -9,6 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% block style%} {% endblock %}">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
               </div>
                -->
             <div class="image">
-                <img src="../echo_speak_mail.png">
+                <img src="{% static 'logo.png' %}">
             </div>
 
           
@@ -81,275 +82,39 @@
                 
             </div>
             <div class="icon-nav">
-                <a href="doc.html"><span class="material-symbols-outlined">
+                <a href="{% url 'doc' %}"><span class="material-symbols-outlined">
                     picture_as_pdf
                     </span></a>
-
-                    <a href="voice.html">
+  
+                    <a href="{% url 'voice' %}">
                         <span class="material-symbols-outlined">
                             mic
                         </span>
                     </a>
-                  <a href="setting.html">
+                  <a href="">
                     <span class="material-symbols-outlined">
                         settings
                         </span>
                   </a> 
-
+  
                   <a href="">
-                    <img src="../blind.jpg">
+                    <img src="{% static 'blind.jpg' %}">
                   </a>
             </div>
            
-            
-             <!-- search box -->
-
-             <div class="container">
-                <input type="text" id="searchInput" placeholder="Search Mail.......">
-                <ul id="searchResults"></ul>
-              </div>
-
-
-            <!-- inbox -->
-            <section>
-                <div class="home">
-
-                    <div class="inbox-box">
-                            <a href="./view.html">
-                                
-                                <div class="image-profile">
-                                    <img src="https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                                </div>
-
-                        <div class="name">
-                          
-                                <h1>Hari Nishan</h1>
-                                <h4>Hari Nish@gmail.com</h4>
-                            </a>
-                        </div>
-                       
-                        <div class="subject">
-                         <!-- <div class="sub">Subject</div> -->
-                         <p>Congratulations on successfully completing your internship with Yugaas Tech! Your dedication and hard work have been greatly appreciated </p>
-                            
-                         
-                             
-
-
-                        </div>
-
-                        <div class="pdf">
-                           
-                            <a href=""><span class="material-symbols-outlined">
-                                picture_as_pdf
-                                </span>
-                            </a>
-                            
-                            
-                          </div>
-
-                         
-
-
-                        <div class="subject-2">
-                            <div class="rec">Recieved</div>
-                            <!-- <div class="sub">Subject</div> -->
-                            <p>3:20 pm</p>
-                           </div>
-
-                    </div>
-
-
-                    <div class="inbox-box">
-                        <a href="./view.html">
-                            
-                            <div class="image-profile">
-                                <img src="https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                            </div>
-
-                    <div class="name">
-                      
-                            <h1>Hari Nishan</h1>
-                            <h4>Hari Nish@gmail.com</h4>
-                        </a>
-                    </div>
-                   
-                    <div class="subject">
-                     <!-- <div class="sub">Subject</div> -->
-                     <p>Congratulations on successfully completing your internship with Yugaas Tech! Your dedication and hard work have been greatly appreciated </p>
-                        
-                     
-                         
-
-
-                    </div>
-
-                    <div class="pdf">
-                       
-                        <a href=""><span class="material-symbols-outlined">
-                            picture_as_pdf
-                            </span>
-                        </a>
-                        
-                      </div>
-
-                     
-
-
-                    <div class="subject-2">
-                        <div class="rec">Recieved</div>
-                        <!-- <div class="sub">Subject</div> -->
-                        <p>3:20 pm</p>
-                       </div>
-
-                </div>
-                
-
-                <div class="inbox-box">
-                    <a href="./view.html">
-                        
-                        <div class="image-profile">
-                            <img src="../blind.jpg" alt="">
-                        </div>
-
-                <div class="name">
-                  
-                        <h1>Hari Nishan</h1>
-                        <h4>Hari Nish@gmail.com</h4>
-                    </a>
-                </div>
-               
-                <div class="subject">
-                 <!-- <div class="sub">Subject</div> -->
-                 <p>Congratulations on successfully completing your internship with Yugaas Tech! Your dedication and hard work have been greatly appreciated </p>
-                    
-                 
-                     
-
-
-                </div>
-
-                <div class="pdf">
-                  
-                    <a href=""><span class="material-symbols-outlined">
-                        picture_as_pdf
-                        </span>
-                    </a>
-                    
-                    
-                  </div>
-
-                 
-
-
-                <div class="subject-2">
-                    <div class="rec">Recieved</div>
-                    <!-- <div class="sub">Subject</div> -->
-                    <p>3:20 pm</p>
-                   </div>
-
-            </div>
-
-
-            <div class="inbox-box">
-                <a href="./view.html">
-                    
-                    <div class="image-profile">
-                        <img src="../logo.png" alt="">
-                    </div>
-
-            <div class="name">
-              
-                    <h1>Hari Nishan</h1>
-                    <h4>Hari Nish@gmail.com</h4>
-                </a>
-            </div>
            
-            <div class="subject">
-             <!-- <div class="sub">Subject</div> -->
-             <p>Congratulations on successfully completing your internship with Yugaas Tech! Your dedication and hard work have been greatly appreciated </p>
-                
-             
-                 
+            
+           
 
 
-            </div>
-
-            <div class="pdf">
-               
-                <a href=""><span class="material-symbols-outlined">
-                    picture_as_pdf
-                    </span>
-                </a>
-                
-                
-              </div>
-
-             
-
-
-            <div class="subject-2">
-                <div class="rec">Recieved</div>
-                <!-- <div class="sub">Subject</div> -->
-                <p>3:20 pm</p>
-               </div>
-
-        </div>
-
-
-        <div class="inbox-box">
-            <a href="./view.html">
-                
-                <div class="image-profile">
-                    <img src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
-                </div>
-
-        <div class="name">
           
-                <h1>Hari Nishan</h1>
-                <h4>Hari Nish@gmail.com</h4>
-            </a>
-        </div>
-       
-        <div class="subject">
-         <!-- <div class="sub">Subject</div> -->
-         <p>Congratulations on successfully completing your internship with Yugaas Tech! Your dedication and hard work have been greatly appreciated </p>
-            
-         
-             
 
+      {% block content %}
 
-        </div>
-
-        <div class="pdf">
-           
-
-            <a href=""><span class="material-symbols-outlined">
-                picture_as_pdf
-                </span>
-            </a>
-            
-          </div>
-
-         
-
-
-        <div class="subject-2">
-            <div class="rec">Recieved</div>
-            <!-- <div class="sub">Subject</div> -->
-            <p>3:20 pm</p>
-           </div>
-
-    </div>
+      {% endblock %}
 
 
 
-                  
-
-
-
-                </div>
-            </section>
         </div>
         
         </div>

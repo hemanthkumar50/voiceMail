@@ -10,5 +10,5 @@ urlpatterns = [
     path("sent/", sent, name="sent"),
     path("view/", view, name="view"),
     path("voice/", voice, name="voice"),
-    path("vr/", vr, name="vr"),
+ 
 ]
